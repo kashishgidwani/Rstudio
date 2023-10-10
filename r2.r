@@ -47,3 +47,10 @@ df3
 sum(df$marks)
 maxmark=max(df3$marks)
 df$name[df$marks==maxmark]
+
+
+#another method
+maxmarks=apply(df3,c(2),max)
+print(maxmarks)
+
+df3$name[which.max(df3$marks)]
